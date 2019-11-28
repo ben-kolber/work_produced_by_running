@@ -21,8 +21,6 @@ G = 9.81  # m/sec^2
 Delta_time = 15  # sec
 
 # Instance of a runner
-
-
 class Human:
 
     def __init__(self, weight, height):  # weight in kg and height in cm
@@ -77,7 +75,6 @@ class Human:
             work_total += (part[0]*part[1]*part[1]*w*w)/2.0 + (part[0] * v_part * v_part)/2.0
         return work_total
 
-
 ##############
 ### Driver ###
 ##############
@@ -95,6 +92,7 @@ if __name__ == "__main__":
     # create an instance of a runner
     human = Human(weight, height)
     print('New runner! -> Weight: {} kg. Height = {} cm'.format(weight, height))
+    
     # start computing output of power in watts every second.(power = work/time)
     # please take into account this is pure wattage, not including the additional
     # 97.2 watts a human generates every second.
@@ -102,7 +100,6 @@ if __name__ == "__main__":
     kilojouls = 0
     total_distance = 0
     for i in range(len(times)):
-
         if times[i] == 0:
             pass
         else:
